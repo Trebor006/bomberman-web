@@ -20,7 +20,7 @@ const Bombercars = () => {
 
     const obtenerBombercars = async () => {
         try {
-            const response = await fetch('http://localhost:3001/bombercars');
+            const response = await fetch('https://resq-backend-app-hwn5h.ondigitalocean.app/bombercars');
             const data = await response.json();
             setBombercars(data);
         } catch (error) {

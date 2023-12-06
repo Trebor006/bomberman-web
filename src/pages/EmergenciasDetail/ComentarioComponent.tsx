@@ -27,7 +27,7 @@ const ComentarioComponent = ({id, comentarios, estadoEmergencia, actualizarComen
     };
 
     const handleGuardar = () => {
-        const url = `http://localhost:3001/emergencias/agregarComentario?id=${id}`;
+        const url = `https://resq-backend-app-hwn5h.ondigitalocean.app/emergencias/agregarComentario?id=${id}`;
 
         nuevoComentario.funcionario = localStorage.getItem('nombre') || '';
         nuevoComentario.departamento = localStorage.getItem('departamento') || '';
@@ -67,7 +67,7 @@ const ComentarioComponent = ({id, comentarios, estadoEmergencia, actualizarComen
         // Realiza las acciones necesarias con el estado y comentario
 
 
-        const url = `http://localhost:3001/emergencias/actualizarEstado?id=${id}`;
+        const url = `https://resq-backend-app-hwn5h.ondigitalocean.app/emergencias/actualizarEstado?id=${id}`;
 
         // nuevoComentario.funcionario = localStorage.getItem('nombre') || '';
         // nuevoComentario.departamento = localStorage.getItem('departamento') || '';

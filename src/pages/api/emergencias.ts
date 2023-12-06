@@ -12,7 +12,7 @@ interface EmergenciaPorTipoDTO {
 
 export async function listarEmergenciasPorGruposTipoEmergencia(): Promise<EmergenciaPorTipoDTO[]> {
     try {
-        const response = await axios.get('http://localhost:3001/emergencias/listarportipo'); // Reemplaza la URL con la de tu API
+        const response = await axios.get('https://resq-backend-app-hwn5h.ondigitalocean.app/emergencias/listarportipo'); // Reemplaza la URL con la de tu API
         //console.log(response.data);
         return response.data;
 
@@ -29,7 +29,7 @@ export async function listarAllEmergencias(
     tipoEmergencia: string,
 ): Promise<EmergenciaAllDTO[]> {
     try {
-        const response = await axios.get('http://localhost:3001/emergencias/listarall', {
+        const response = await axios.get('https://resq-backend-app-hwn5h.ondigitalocean.app/emergencias/listarall', {
             params: {
                 estado: estado,
                 fechaInicio: fechaInicio,

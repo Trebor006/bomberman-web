@@ -16,7 +16,7 @@ const Bombercar = () => {
         const cargarBombercar = async () => {
             if (id) {
                 try {
-                    const response = await axios.get(`http://localhost:3001/bombercars/buscar?id=${id}`);
+                    const response = await axios.get(`https://resq-backend-app-hwn5h.ondigitalocean.app/bombercars/buscar?id=${id}`);
                     const bombercar = response.data;
                     setMarca(bombercar.marca);
                     setPlaca(bombercar.placa);
@@ -63,11 +63,11 @@ const Bombercar = () => {
             };
 
             if (isEditing && id) {
-                const response = await axios.put(`http://localhost:3001/bombercars/${id}`, bombercarData);
+                const response = await axios.put(`https://resq-backend-app-hwn5h.ondigitalocean.app/bombercars/${id}`, bombercarData);
                 toast.success('Carro Bombero actualizada exitosamente');
                 console.log('Respuesta del servidor:', response.data);
             } else {
-                const response = await axios.post('http://localhost:3001/bombercars', bombercarData);
+                const response = await axios.post('https://resq-backend-app-hwn5h.ondigitalocean.app/bombercars', bombercarData);
                 toast.success('Carro Bombero registrada exitosamente');
                 console.log('Respuesta del servidor:', response.data);
             }
