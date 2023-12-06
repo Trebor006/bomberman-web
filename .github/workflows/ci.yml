@@ -69,7 +69,7 @@ jobs:
 
       - name: Tag image
         run:
-          docker tag trebor006/bomberman-web:latest registry.digitalocean.com/bombermanback/bomberman-web:1.0.0
+          docker tag trebor006/bomberman-web:latest registry.digitalocean.com/bomberback/bomberman-web:1.0.0
       - name: Push image to DO Container Registry
-        run: docker push registry.digitalocean.com/bombermanback/bomberman-web:1.0.0
+        run: docker push registry.digitalocean.com/bomberback/bomberman-web:1.0.0
 
