@@ -23,3 +23,7 @@ slick-prev:before, .slick-next:before {
 .justify-end {
   justify-content: center !important;
 }
+
+.textdetail{
+  padding-bottom: 15px;
+}
