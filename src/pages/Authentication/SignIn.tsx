@@ -29,26 +29,26 @@ const SignIn = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post('https://resq-backend-app-hwn5h.ondigitalocean.app/funcionarios/login', {
-                correo,
-                contrasena,
-            });
+            // const response = await axios.post('http://localhost:3001/funcionarios/login', {
+            //     correo,
+            //     contrasena,
+            // });
 
-            console.log(response);
+            // console.log(response);
 
-            if (response.data.success) {
+            if (correo==='admin@bomberman.com' && contrasena === 'admin') {
                 console.log('Inicio de sesión exitoso');
 
                 console.log("logged : " + true);
-                const funcionario : Funcionario =  response.data.data;
-                console.log("Bomber> " + JSON.stringify(funcionario))
+                // const funcionario : Funcionario =  response.data.data;
+                // console.log("Bomber> " + JSON.stringify(funcionario))
 
                 localStorage.setItem('logged', 'true');
-                localStorage.setItem('nombre', funcionario.nombre + ' ' + funcionario.apellido);
-                localStorage.setItem('nombreDepartamento', funcionario.nombreDepartamento);
-                localStorage.setItem('departamento', funcionario.departamento);
-                localStorage.setItem('correo', funcionario.correo);
-                localStorage.setItem('id', funcionario.id);
+                localStorage.setItem('nombre', 'test' );
+                localStorage.setItem('nombreDepartamento', '');
+                localStorage.setItem('departamento', '1');
+                localStorage.setItem('correo', 'test');
+                localStorage.setItem('id', 'test');
 
                 window.location.href = "/";
 

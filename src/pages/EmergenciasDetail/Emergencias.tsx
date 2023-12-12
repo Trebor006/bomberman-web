@@ -53,7 +53,7 @@ const Emergencias = () => {
 
     //todo SockeT!!!
     // useEffect(() => {
-    //     const socket = io('https://resq-backend-app-hwn5h.ondigitalocean.app');
+    //     const socket = io('http://localhost:3001');
     //
     //     socket.on('nuevaEmergencia', handleInsertEvent);
     //
@@ -81,7 +81,7 @@ const Emergencias = () => {
 
     const obtenerTiposEmergencia = async () => {
         try {
-            const response = await fetch('https://resq-backend-app-hwn5h.ondigitalocean.app/tipo-emergencias/porDepartamento?departamento=' + localStorage.getItem('departamento'));
+            const response = await fetch('http://localhost:3001/tipo-emergencias/porDepartamento?departamento=' + localStorage.getItem('departamento'));
             const data = await response.json();
             setTiposEmergencia(data);
         } catch (error) {
@@ -116,7 +116,7 @@ const Emergencias = () => {
             console.log("paginacion");
             console.log(page);
 
-            const response = await axios.get<EmergenciaResult>('https://resq-backend-app-hwn5h.ondigitalocean.app/emergencias/busquedaPaginada', {
+            const response = await axios.get<EmergenciaResult>('http://localhost:3001/emergencias/busquedaPaginada', {
                 params: {
                     ...filtros, pagina: page, porPagina: pageSize,
                     ordenadoPor: sortConfig.key, ordenadoDir: sortConfig.direction === 'asc' ? 1 : -1,

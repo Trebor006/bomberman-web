@@ -26,7 +26,7 @@ const CambiarEstado: React.FC<CambiarEstadoProps> = ({id, actualizarEstado, clos
     useEffect(() => {
         const cargarBombercar = async () => {
                 try {
-                    const response = await axios.get(`https://resq-backend-app-hwn5h.ondigitalocean.app/bombercars`);
+                    const response = await axios.get(`http://localhost:3001/bombercars`);
                     const bombercarDetail = response.data;
                     setBombercars(bombercarDetail);
                     console.log(bombercarDetail);

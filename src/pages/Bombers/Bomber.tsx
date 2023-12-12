@@ -4,9 +4,9 @@ import {toast, ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {useLocation, useParams} from "react-router-dom";
 
-interface Departamento {
+interface BomberCar {
     id: number;
-    nombre: string;
+    placa: string;
 }
 
 interface Bomber {
@@ -30,14 +30,14 @@ const Bomber = () => {
     const [celular, setCelular] = useState("");
     const [correo, setCorreo] = useState("");
 
-    const [departamentos, setDepartamentos] = useState<Departamento[]>([]);
+    const [bombercars, setBombercars] = useState<BomberCar[]>([]);
     const [bomberCarId, setBomberCarId] = useState("");
 
     useEffect(() => {
         const cargarBomber = async () => {
             if (id) {
                 try {
-                    const response = await axios.get(`https://resq-backend-app-hwn5h.ondigitalocean.app/bombers/buscar?id=${id}`);
+                    const response = await axios.get(`http://localhost:3001/bombers/buscar?id=${id}`);
                     const bomber: Bomber = response.data;
                     setNombre(bomber.nombre);
                     setApellido(bomber.apellido);
@@ -62,12 +62,12 @@ const Bomber = () => {
 
     const fetchDepartamentos = async () => {
         try {
-            const response = await axios.get<Departamento[]>(
-                "https://resq-backend-app-hwn5h.ondigitalocean.app/departamentos"
+            const response = await axios.get<BomberCar[]>(
+                "http://localhost:3001/bombercars"
             );
-            setDepartamentos(response.data);
+            setBombercars(response.data);
         } catch (error) {
-            console.error("Error al obtener los departamentos:", error);
+            console.error("Error al obtener los bombercars:", error);
         }
     };
 
@@ -126,7 +126,7 @@ const Bomber = () => {
 
             // Enviar los datos al servidor
             const response = await axios.post(
-                "https://resq-backend-app-hwn5h.ondigitalocean.app/bombers/registrar",
+                "http://localhost:3001/bombers/registrar",
                 bomberData
             );
 
@@ -251,7 +251,7 @@ const Bomber = () => {
                                 <div className="mb-5.5">
                                     <label htmlFor="correo"
                                         className="mb-3 block text-sm font-medium text-black dark:text-white" >
-                                        Departamento:
+                                        Asignar Carro:
                                     </label>
                                     <div className="relative">
                                         <select
@@ -261,10 +261,10 @@ const Bomber = () => {
                                             onChange={handleDepartamentoChange}
                                             className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
                                         >
-                                            <option value="">Seleccione un departamento</option>
-                                            {departamentos.map((departamento) => (
-                                                <option key={departamento.id} value={departamento.id}>
-                                                    {departamento.nombre}
+                                            <option value="">Seleccione un carro</option>
+                                            {bombercars.map((bomberCar) => (
+                                                <option key={bomberCar.id} value={bomberCar.id}>
+                                                    {bomberCar.placa}
                                                 </option>
                                             ))}
                                         </select>
