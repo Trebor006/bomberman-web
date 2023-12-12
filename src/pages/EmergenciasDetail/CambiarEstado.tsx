@@ -26,9 +26,13 @@ const CambiarEstado: React.FC<CambiarEstadoProps> = ({id, actualizarEstado, clos
     useEffect(() => {
         const cargarBombercar = async () => {
                 try {
+                    const suggestionResponse = await axios.get(`http://localhost:3001/bombercars/obtenerSugerencia?emergenciaId=` + id);
+                    const sugested = suggestionResponse.data;
+                    console.log("sugested " + sugested);
                     const response = await axios.get(`http://localhost:3001/bombercars`);
                     const bombercarDetail = response.data;
                     setBombercars(bombercarDetail);
+                    setBomberCarId(sugested);
                     console.log(bombercarDetail);
                 } catch (error) {
                     console.error('Error al cargar el departamento:', error);
@@ -78,12 +82,12 @@ const CambiarEstado: React.FC<CambiarEstadoProps> = ({id, actualizarEstado, clos
                             </label>
                             <select
                                 className="border border-gray-300 rounded-md px-3 py-2 w-full"
-                                id="estado"
-                                name="estado"
+                                id="carrobombero"
+                                name="carrobombero"
                                 value={bomberCarId}
                                 onChange={(e) => setBomberCarId(e.target.value)}
                             >
-                                <option value="">-- Selecionar Estado --</option>
+                                <option value="">-- Selecionar Carro Bombero --</option>
                                 {bombercars &&
                                     bombercars
                                         .map((bombercar) => (
