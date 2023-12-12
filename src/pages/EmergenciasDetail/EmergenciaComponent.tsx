@@ -367,7 +367,7 @@ const Emergencias = () => {
         <div className="">
             <div className="w-full bg-gray-100 rounded p-8 flex">
                 <div className="w-1/3 pr-4">
-                    <h2 className="text-lg font-semibold mb-4">Emergencia</h2>
+                    <h2 className="text-lg font-semibold mb-4">Detalle de la Emergencia</h2>
                     {/*<div className="mb-4">*/}
                     {/*    <label htmlFor="titulo" className="block text-sm font-medium text-gray-700">*/}
                     {/*        Título:*/}
@@ -394,7 +394,7 @@ const Emergencias = () => {
                     {/*    />*/}
                     {/*</div>*/}
                     <div className="mb-4">
-                        <label htmlFor="tipoEmergencia" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="tipoEmergencia" className="textdetail block text-sm font-medium text-gray-700">
                             Tipo de Emergencia:
                         </label>
                         <input
@@ -407,7 +407,7 @@ const Emergencias = () => {
                         />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="estado" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="estado" className="textdetail block text-sm font-medium text-gray-700">
                             Estado:
                         </label>
                         <input
@@ -423,15 +423,21 @@ const Emergencias = () => {
                     {
                         audioUrl &&
                         <div className="mb-4">
-                            <label htmlFor="estado" className="block text-sm font-medium text-gray-700">
+                            <label htmlFor="estado" className="textdetail block text-sm font-medium text-gray-700">
                                 Audio:
                             </label>
-                            <a target="_blank" href={audioUrl} >Abrir Audio</a>
+                            <a target="_blank" href={audioUrl}
+                             className="inline-flex items-center justify-center rounded-full bg-primary py-4 px-10 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
+                            >
+                                Abrir Audio</a>
                         </div>
                     }
 
 
                     <div className="mb-4">
+                        <label htmlFor="imagen" className="textdetail block text-sm font-medium text-gray-700">
+                            Imagenes:
+                        </label>
                         <Slider>
                             {photos && photos.map((url, index) => (
                                 <div key={index}>
@@ -460,7 +466,8 @@ const Emergencias = () => {
                     <ToastContainer/>
                 </div>
                 <div className="w-1/3 pl-4">
-                    <div id="map" style={{height: '500px'}}></div>
+                    <h2 className="text-lg font-semibold mb-4">Ubicación de la Emergencia</h2>
+                    <div id="map" style={{height: '600px'}}></div>
                 </div>
                 <div className="w-1/3 pl-4">
                     <ComentarioComponent comentarios={comentarios} id={id} estadoEmergencia={estado} actualizarComentarios={actualizarComentarios}/>

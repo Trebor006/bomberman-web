@@ -7,6 +7,7 @@ module.exports = {
     theme: {
         fontFamily: {
             satoshi: ['Satoshi', 'sans-serif'],
+            outfit: ['Outfit']
         },
         colors: {
             current: 'currentColor',
@@ -18,8 +19,8 @@ module.exports = {
             bodydark: '#d03030',
             bodydark1: '#b70404',
             bodydark2: '#a40000',
-            primary: '#a40000',
-            secondary: '#9d0505',
+            primary: '#EA5D5B',
+            secondary: '#ffffff',
             stroke: '#E2E8F0',
             gray: '#EFF4FB',
             graydark: '#f8edeb',

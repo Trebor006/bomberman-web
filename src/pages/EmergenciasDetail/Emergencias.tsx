@@ -262,12 +262,12 @@ const Emergencias = () => {
             <div className="max-w-full overflow-x-auto">
                 <table className="w-full table-auto">
                     <thead>
-                    <tr className="bg-gray-2 text-left dark:bg-meta-4">
-                        <th className="min-w-[120px] py-1 px-4 text-black dark:text-white xl:pl-11">
+                    <tr className="bg-primary text-left dark:bg-meta-4">
+                        <th className="min-w-[120px] py-1 px-4 text-white dark:text-white xl:pl-11">
                         </th>
 
                         <th onClick={() => handleSort('createdAt')}
-                            className="min-w-[120px] py-1 px-4 text-black dark:text-white xl:pl-11">
+                            className="min-w-[120px] py-1 px-4 text-white dark:text-white xl:pl-11">
                             {sortConfig && sortConfig.key === 'createdAt' && (
                                 <span>{sortConfig.direction === 'asc' ? '🔼' : '🔽'}</span>
                             )}
@@ -281,27 +281,27 @@ const Emergencias = () => {
                         {/*    {' '} Título*/}
                         {/*</th>*/}
                         <th onClick={() => handleSort('descripcion')}
-                            className="min-w-[320px] py-4 px-4 text-black dark:text-white xl:pl-11">
+                            className="min-w-[320px] py-4 px-4 text-white dark:text-white xl:pl-11">
                             {sortConfig && sortConfig.key === 'descripcion' && (
                                 <span>{sortConfig.direction === 'asc' ? '🔼' : '🔽'}</span>
                             )}
                             {' '} Descripción
                         </th>
                         <th onClick={() => handleSort('tipoEmergencia')}
-                            className="min-w-[220px] py-4 px-4 text-black dark:text-white xl:pl-11">
+                            className="min-w-[220px] py-4 px-4 text-white dark:text-white xl:pl-11">
                             {sortConfig && sortConfig.key === 'tipoEmergencia' && (
                                 <span>{sortConfig.direction === 'asc' ? '🔼' : '🔽'}</span>
                             )}
                             {' '} Tipo de Emergencia
                         </th>
                         <th onClick={() => handleSort('estado')}
-                            className="min-w-[100px] py-4 px-4 text-black dark:text-white xl:pl-11">
+                            className="min-w-[100px] py-4 px-4 text-white dark:text-white xl:pl-11">
                             {sortConfig && sortConfig.key === 'estado' && (
                                 <span>{sortConfig.direction === 'asc' ? '🔼' : '🔽'}</span>
                             )}
                             {' '} Estado
                         </th>
-                        <th className="min-w-[100px] py-4 px-4 text-black dark:text-white">
+                        <th className="min-w-[100px] py-4 px-4 text-white dark:text-white">
                             Acciones
                         </th>
                     </tr>
@@ -318,7 +318,7 @@ const Emergencias = () => {
                                         <img className='image-prueba' src={emergencia.imagenesUrls[0]}/>
                                     </td>
                                     <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
-                                        <h5 className="font-medium text-black dark:text-white">
+                                        <h5 className="font-medium dark:text-white">
                                             {emergencia.createdAt}
                                         </h5>
                                     </td>
@@ -328,17 +328,17 @@ const Emergencias = () => {
                                     {/*    </h5>*/}
                                     {/*</td>*/}
                                     <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                                        <p className="text-black dark:text-white">
+                                        <p className="dark:text-white">
                                             {emergencia.descripcion}
                                         </p>
                                     </td>
                                     <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                                        <p className="text-black dark:text-white">
+                                        <p className="dark:text-white">
                                             {emergencia.tipoEmergencia}
                                         </p>
                                     </td>
                                     <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                                        <p className="text-black dark:text-white">{emergencia.estado}</p>
+                                        <p className="dark:text-white">{emergencia.estado}</p>
                                     </td>
                                     <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                         <div className="flex items-center space-x-3.5">
