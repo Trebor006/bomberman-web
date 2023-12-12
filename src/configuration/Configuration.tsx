@@ -31,7 +31,7 @@ const Configuration: React.FC = () => {
     event.preventDefault();
     try {
       await axios.post(
-        "https://resq-backend-app-hwn5h.ondigitalocean.app/configuraciones/registrar",
+        "http://localhost:3001/configuraciones/registrar",
         config
       );
       toast.success("Configuración guardada exitosamente");

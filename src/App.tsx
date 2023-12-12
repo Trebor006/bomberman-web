@@ -37,13 +37,13 @@ function App() {
         null
     ) : (
         <>
-            {/*{!logged ?*/}
-            {/*    <Routes>*/}
-            {/*        <Route path="/" element={<MapLayout/>}/>*/}
-            {/*        <Route path="/login" element={<SignIn/>}/>*/}
+            {!logged ?
+                <Routes>
+                    {/*<Route path="/" element={<MapLayout/>}/>*/}
+                    <Route path="/" element={<SignIn/>}/>
             {/*        <Route path="/emergencias-detail" element={<EmergenciasDetails/>}/>*/}
-            {/*    </Routes>*/}
-            {/*    :*/}
+                </Routes>
+                :
                 <Routes>
                     <Route path="/" element={<EmergenciasDetails/>}/>
 
@@ -76,7 +76,7 @@ function App() {
                     <Route path="/emergencia-detail/editar/:id" element={<EmergenciaForm/>}/>
 
                 </Routes>
-            {/*}*/}
+            }
         </>
     );
 }

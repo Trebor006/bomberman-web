@@ -39,7 +39,7 @@ const TipoEmergencia = () => {
         const cargarTipoEmergencia = async () => {
             if (id) {
                 try {
-                    const response = await axios.get(`https://resq-backend-app-hwn5h.ondigitalocean.app/tipo-emergencias/buscar?id=${id}`);
+                    const response = await axios.get(`http://localhost:3001/tipo-emergencias/buscar?id=${id}`);
                     const tipoEmergencia: TipoEmergencia = response.data;
                     setNombre(tipoEmergencia.nombre);
                     setDescripcion(tipoEmergencia.descripcion);
@@ -60,7 +60,7 @@ const TipoEmergencia = () => {
     const fetchDepartamentos = async () => {
         try {
             const response = await axios.get<Departamento[]>(
-                "https://resq-backend-app-hwn5h.ondigitalocean.app/departamentos"
+                "http://localhost:3001/departamentos"
             );
             setDepartamentos(response.data);
         } catch (error) {
@@ -111,7 +111,7 @@ const TipoEmergencia = () => {
 
             // Enviar los datos al servidor
             const response = await axios.post(
-                "https://resq-backend-app-hwn5h.ondigitalocean.app/tipo-emergencias/registrar",
+                "http://localhost:3001/tipo-emergencias/registrar",
                 tipoEmergenciaData
             );
 

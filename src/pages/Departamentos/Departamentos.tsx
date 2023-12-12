@@ -19,7 +19,7 @@ const Departamentos = () => {
 
     const obtenerDepartamentos = async () => {
         try {
-            const response = await fetch('https://resq-backend-app-hwn5h.ondigitalocean.app/departamentos');
+            const response = await fetch('http://localhost:3001/departamentos');
             const data = await response.json();
             setDepartamentos(data);
         } catch (error) {

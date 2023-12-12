@@ -40,7 +40,7 @@ const Emergencias = () => {
     const cargarEmergencia = async () => {
         if (id) {
             try {
-                const response = await axios.get(`https://resq-backend-app-hwn5h.ondigitalocean.app/emergencias/buscar?id=${id}`);
+                const response = await axios.get(`http://localhost:3001/emergencias/buscar?id=${id}`);
                 const emergencia: Emergencia = response.data;
 
                 console.log('Emergencia: ' + JSON.stringify(emergencia));
@@ -118,11 +118,11 @@ const Emergencias = () => {
             };
 
             if (isEditing && id) {
-                const response = await axios.put(`https://resq-backend-app-hwn5h.ondigitalocean.app/emergencia/${id}`, emergenciaData);
+                const response = await axios.put(`http://localhost:3001/emergencia/${id}`, emergenciaData);
                 toast.success('Emergencia actualizada exitosamente');
                 console.log('Respuesta del servidor:', response.data);
             } else {
-                const response = await axios.post('https://resq-backend-app-hwn5h.ondigitalocean.app/emergencia/registrar', emergenciaData);
+                const response = await axios.post('http://localhost:3001/emergencia/registrar', emergenciaData);
                 toast.success('Emergencia registrada exitosamente');
                 console.log('Respuesta del servidor:', response.data);
             }

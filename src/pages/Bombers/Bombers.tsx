@@ -21,7 +21,7 @@ const Bombers = () => {
 
     const obtenerBombers = async () => {
         try {
-            const response = await axios.get<Bomber[]>('https://resq-backend-app-hwn5h.ondigitalocean.app/bombers');
+            const response = await axios.get<Bomber[]>('http://localhost:3001/bombers');
             setBombers(response.data);
         } catch (error) {
             console.error('Error al obtener los bombers:', error);
