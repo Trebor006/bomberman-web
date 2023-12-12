@@ -423,13 +423,14 @@ const Emergencias = () => {
                     {
                         audioUrl &&
                         <div className="mb-4">
-                            <label htmlFor="estado" className="textdetail block text-sm font-medium text-gray-700">
+                            <label htmlFor="audioUrl" className="textdetail block text-sm font-medium text-gray-700">
                                 Audio:
                             </label>
-                            <a target="_blank" href={audioUrl}
-                             className="inline-flex items-center justify-center rounded-full bg-primary py-4 px-10 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
-                            >
-                                Abrir Audio</a>
+                            <audio
+                                controls
+                                src={audioUrl}>
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
                         </div>
                     }
 
