@@ -37,7 +37,7 @@ const Bomber = () => {
         const cargarBomber = async () => {
             if (id) {
                 try {
-                    const response = await axios.get(`http://localhost:3001/bombers/buscar?id=${id}`);
+                    const response = await axios.get(`https://resq-backend-app-hwn5h.ondigitalocean.app/bombers/buscar?id=${id}`);
                     const bomber: Bomber = response.data;
                     setNombre(bomber.nombre);
                     setApellido(bomber.apellido);
@@ -63,7 +63,7 @@ const Bomber = () => {
     const fetchDepartamentos = async () => {
         try {
             const response = await axios.get<BomberCar[]>(
-                "http://localhost:3001/bombercars"
+                "https://resq-backend-app-hwn5h.ondigitalocean.app/bombercars"
             );
             setBombercars(response.data);
         } catch (error) {
@@ -126,7 +126,7 @@ const Bomber = () => {
 
             // Enviar los datos al servidor
             const response = await axios.post(
-                "http://localhost:3001/bombers/registrar",
+                "https://resq-backend-app-hwn5h.ondigitalocean.app/bombers/registrar",
                 bomberData
             );
 

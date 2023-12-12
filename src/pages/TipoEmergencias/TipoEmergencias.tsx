@@ -20,7 +20,7 @@ const TipoEmergencias = () => {
 
     const obtenerTiposEmergencia = async () => {
         try {
-            const response = await fetch('http://localhost:3001/tipo-emergencias');
+            const response = await fetch('https://resq-backend-app-hwn5h.ondigitalocean.app/tipo-emergencias');
             const data = await response.json();
             setTiposEmergencia(data);
         } catch (error) {

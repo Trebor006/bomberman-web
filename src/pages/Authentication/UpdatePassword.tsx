@@ -63,7 +63,7 @@ const UpdatePassword = () => {
         try {
             // Llamar al servicio en el backend para actualizar la contraseña
             const response = await axios.post(
-                'http://localhost:3001/bombers/actualizar-contrasena',
+                'https://resq-backend-app-hwn5h.ondigitalocean.app/bombers/actualizar-contrasena',
                 {
                     correo,
                     contrasenaActualEncriptada,

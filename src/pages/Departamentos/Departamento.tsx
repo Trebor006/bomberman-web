@@ -15,7 +15,7 @@ const Departamento = () => {
         const cargarDepartamento = async () => {
             if (id) {
                 try {
-                    const response = await axios.get(`http://localhost:3001/departamentos/buscar?id=${id}`);
+                    const response = await axios.get(`https://resq-backend-app-hwn5h.ondigitalocean.app/departamentos/buscar?id=${id}`);
                     const departamento = response.data;
                     setNombre(departamento.nombre);
                     setDescripcion(departamento.descripcion);
@@ -52,11 +52,11 @@ const Departamento = () => {
             };
 
             if (isEditing && id) {
-                const response = await axios.put(`http://localhost:3001/departamentos/${id}`, departamentoData);
+                const response = await axios.put(`https://resq-backend-app-hwn5h.ondigitalocean.app/departamentos/${id}`, departamentoData);
                 toast.success('Área de trabajo actualizada exitosamente');
                 console.log('Respuesta del servidor:', response.data);
             } else {
-                const response = await axios.post('http://localhost:3001/departamentos/registrar', departamentoData);
+                const response = await axios.post('https://resq-backend-app-hwn5h.ondigitalocean.app/departamentos/registrar', departamentoData);
                 toast.success('Área de trabajo registrada exitosamente');
                 console.log('Respuesta del servidor:', response.data);
             }
