@@ -76,7 +76,7 @@ const CambiarEstado: React.FC<CambiarEstadoProps> = ({id, actualizarEstado, clos
                         </div>
 
                         <div className="mb-4">
-                            <label className="block text-gray-800 font-bold mb-2" htmlFor="estado">
+                            <label className="block text-gray-800 font-bold mb-2" htmlFor="carrobombero">
                                 Carro Bombero asignado:
                             </label>
                             <select
