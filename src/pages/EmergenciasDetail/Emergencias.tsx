@@ -188,6 +188,8 @@ const Emergencias = () => {
 
         setRenderPagination(false);
         return botones;
+
+
     };
 
     // @ts-ignore
@@ -338,12 +340,16 @@ const Emergencias = () => {
                                         </p>
                                     </td>
                                     <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                                        <p className="dark:text-white">{emergencia.estado}</p>
+                                        <p className={`text-center dark:text-white ${emergencia.estado === 'ACEPTADA' ? 'aceptadoestilo' : emergencia.estado === 'PROCESADA' ? 'procedaestilo'  : 'alerttext'}`}>
+                                            {emergencia.estado}
+                                        </p>
+
+
                                     </td>
                                     <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                         <div className="flex items-center space-x-3.5">
                                             <button>
-                                                <Link to={`/emergencia-detail/ver/${emergencia._id}`}>
+                                            <Link to={`/emergencia-detail/ver/${emergencia._id}`}>
                                                     <IoEyeSharp/>
                                                 </Link>
                                             </button>

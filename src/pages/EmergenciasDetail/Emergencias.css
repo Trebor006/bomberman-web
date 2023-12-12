@@ -31,3 +31,21 @@ slick-prev:before, .slick-next:before {
 .colortexttabla{
   color: black;
 }
+.alerttext{
+  background: #F9E79F;
+  padding: 10px;
+  border-radius: 10px;
+  color: #9d5425;
+}
+.aceptadoestilo{
+  background: #e1f8f0;
+  padding: 10px;
+  border-radius: 10px;
+  color: #1c2434;
+}
+.procedaestilo{
+  background: #2BA2B8;
+  padding: 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
