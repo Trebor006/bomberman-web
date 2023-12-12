@@ -22,7 +22,7 @@ module.exports = {
             secondary: '#9d0505',
             stroke: '#E2E8F0',
             gray: '#EFF4FB',
-            graydark: '#333A48',
+            graydark: '#f8edeb',
             'gray-2': '#ffffff',
             'gray-3': '#d02828',
             whiten: '#F1F5F9',

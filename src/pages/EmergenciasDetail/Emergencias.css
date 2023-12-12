@@ -2,3 +2,24 @@ image-prueba {
   width: 75px;
   height: 100px;
 }
+img.image-prueba{
+  width: 50px;
+  border-radius: 0.375rem
+}
+
+.slick-slide img{
+  max-width: 50% !important;
+  display:block;
+  margin:auto;
+}
+
+slick-prev:before, .slick-next:before {
+  color: #8e0404 !important;
+}
+.slick-prev:before, .slick-next:before{
+  color: #8e0404 !important;
+}
+
+.justify-end {
+  justify-content: center !important;
+}
