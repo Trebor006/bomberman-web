@@ -113,10 +113,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <NavLink
                         to="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 text-white duration-300 ease-in-out hover:text-black-2 bg-primary dark:hover:bg-meta-4 ${
                           (pathname === '/' ||
                             pathname.includes('dashboard')) &&
-                          'bg-graydark dark:bg-meta-4'
+                          'bg-primary dark:bg-meta-4'
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
@@ -180,7 +180,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             <NavLink
                               to="/departaments"
                               className={({ isActive }) =>
-                                'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-bodydark2 ' +
+                                'group relative flex items-center gap-2.5 rounded-md px-4 text-black-2 duration-300 ease-in-out hover:text-black-2 ' +
                                 (isActive && '!text-bodydark2')
                               }
                             >
@@ -192,7 +192,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             <NavLink
                               to="/bombercars"
                               className={({ isActive }) =>
-                                'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-bodydark2 ' +
+                                'group relative flex items-center gap-2.5 rounded-md px-4 text-black-2 duration-300 ease-in-out hover:text-black-2 ' +
                                 (isActive && '!text-bodydark2')
                               }
                             >
@@ -204,7 +204,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             <NavLink
                                 to="/complaintstype"
                                 className={({ isActive }) =>
-                                    'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-bodydark2 ' +
+                                    'group relative flex items-center gap-2.5 rounded-md px-4 text-black-2 duration-300 ease-in-out hover:text-black-2 ' +
                                     (isActive && '!text-bodydark2')
                                 }
                             >
@@ -216,7 +216,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             <NavLink
                                 to="/bombers"
                                 className={({ isActive }) =>
-                                    'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-bodydark2 ' +
+                                    'group relative flex items-center gap-2.5 rounded-md px-4 text-black-2 duration-300 ease-in-out hover:text-black-2 ' +
                                     (isActive && '!text-bodydark2')
                                 }
                             >

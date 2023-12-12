@@ -158,7 +158,7 @@ const Bomber = () => {
                                     <div className="w-full sm:w-1/2">
                                         <label
                                             htmlFor="name"
-                                            className="mb-3 block text-sm font-medium text-black dark:text-white"
+                                            className="mb-3 block text-sm text-black dark:text-white"
                                         >
                                             Nombre
                                         </label>
@@ -175,7 +175,7 @@ const Bomber = () => {
                                     <div className="w-full sm:w-1/2">
                                         <label
                                             htmlFor="lastname"
-                                            className="mb-3 block text-sm font-medium text-black dark:text-white"
+                                            className="mb-3 block text-sm text-black dark:text-white"
                                         >
                                             Apellido
                                         </label>
@@ -193,7 +193,7 @@ const Bomber = () => {
                                 <div className="mb-5.5">
                                     <label
                                         htmlFor="ci"
-                                        className="mb-3 block text-sm font-medium text-black dark:text-white"
+                                        className="mb-3 block text-sm text-black dark:text-white"
                                     >
                                         CI:
                                     </label>
@@ -212,7 +212,7 @@ const Bomber = () => {
                                 <div className="mb-5.5">
                                     <label
                                         htmlFor="celular"
-                                        className="mb-3 block text-sm font-medium text-black dark:text-white"
+                                        className="mb-3 block text-sm text-black dark:text-white"
                                     >
                                         Celular:
                                     </label>
@@ -231,7 +231,7 @@ const Bomber = () => {
                                 <div className="mb-5.5">
                                     <label
                                         htmlFor="correo"
-                                        className="mb-3 block text-sm font-medium text-black dark:text-white"
+                                        className="mb-3 block text-sm text-black dark:text-white"
                                     >
                                         Correo
                                     </label>

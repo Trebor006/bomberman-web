@@ -45,55 +45,58 @@ const Bombers = () => {
             <div className="flex justify-end mb-4">
                 <a
                     href="/bombers/registrar"
-                    className="inline-flex items-center justify-center rounded-md bg-meta-3 py-4 px-10 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
+                    className="inline-flex items-center justify-center rounded-full bg-primary py-4 px-10 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
                 >
                     Agregar nuevo Bombero
                 </a>
+                <button >
+
+                </button>
             </div>
 
             <div className="max-w-full overflow-x-auto">
                 <table className="w-full table-auto">
                     <thead>
-                    <tr className="bg-gray-2 text-left dark:bg-meta-4">
-                        <th className="min-w-[220px] py-4 px-4 font-medium text-black dark:text-white xl:pl-11">
+                    <tr className="bg-primary text-left dark:bg-meta-4">
+                        <th className="min-w-[220px] py-4 px-4 text-white dark:text-white xl:pl-11">
                             Nombre
                         </th>
-                        <th className="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                        <th className="min-w-[150px] py-4 px-4 text-white dark:text-white">
                             Apellido
                         </th>
-                        <th className="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                        <th className="min-w-[150px] py-4 px-4 text-white dark:text-white">
                             CI
                         </th>
-                        <th className="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                        <th className="min-w-[150px] py-4 px-4 text-white dark:text-white">
                             Celular
                         </th>
-                        <th className="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                        <th className="min-w-[150px] py-4 px-4 text-white dark:text-white">
                             Correo
                         </th>
-                        <th className="py-4 px-4 font-medium text-black dark:text-white">
+                        <th className="py-4 px-4 text-white dark:text-white">
                             Acciones
                         </th>
                     </tr>
                     </thead>
                     <tbody>
                     {bombers.map((bomber) => (
-                        <tr key={bomber.id}>
+                        <tr key={bomber.id} >
                             <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
-                                <h5 className="font-medium text-black dark:text-white">
+                                <h5 className="font-medium colortexttabla dark:text-white">
                                     {bomber.nombre}
                                 </h5>
                             </td>
                             <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                                <p className="text-black dark:text-white">{bomber.apellido}</p>
+                                <p className="colortexttabla dark:text-white">{bomber.apellido}</p>
                             </td>
                             <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                                <p className="text-black dark:text-white">{bomber.ci}</p>
+                                <p className="colortexttabla dark:text-white">{bomber.ci}</p>
                             </td>
                             <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                                <p className="text-black dark:text-white">{bomber.celular}</p>
+                                <p className="colortexttabla dark:text-white">{bomber.celular}</p>
                             </td>
                             <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                                <p className="text-black dark:text-white">{bomber.correo}</p>
+                                <p className="colortexttabla dark:text-white">{bomber.correo}</p>
                             </td>
                             <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                 <div className="flex items-center space-x-3.5">

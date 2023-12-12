@@ -426,7 +426,10 @@ const Emergencias = () => {
                             <label htmlFor="estado" className="textdetail block text-sm font-medium text-gray-700">
                                 Audio:
                             </label>
-                            <a target="_blank" href={audioUrl} >Abrir Audio</a>
+                            <a target="_blank" href={audioUrl}
+                             className="inline-flex items-center justify-center rounded-full bg-primary py-4 px-10 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
+                            >
+                                Abrir Audio</a>
                         </div>
                     }
 
