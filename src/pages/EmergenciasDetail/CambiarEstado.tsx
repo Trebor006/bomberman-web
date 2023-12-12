@@ -72,7 +72,6 @@ const CambiarEstado: React.FC<CambiarEstadoProps> = ({id, actualizarEstado, clos
                                 <option value="">-- Selecionar Estado --</option>
                                 <option value="ACEPTADA">ACEPTADA</option>
                                 <option value="RECHAZADA">RECHAZADA</option>
-                                <option value="PROCESADA">PROCESADA</option>
                             </select>
                         </div>
 
